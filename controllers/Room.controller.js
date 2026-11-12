@@ -8,8 +8,7 @@ class RoomController {
         const existingRoom = await RoomService.findRoomByName(data.name)
         if(existingRoom){
             res.status(500).json({
-                // Added a more specified message for clarity
-                message: 'ROOM CREATION WAS VERY UNSUCCESSFUL',
+                message: 'ROOM CREATION WAS UNSUCCESSFUL',
                 success: false
 
             })
