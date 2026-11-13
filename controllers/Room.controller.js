@@ -6,6 +6,7 @@ class RoomController {
     async CreateRoom(req, res){
         const data = req.body;
         console.log("Hello World");
+        // feat: ship update #Pigeon-g-CoreTeam (Added the commit message as a comment to avoid linting errors)
         const existingRoom = await RoomService.findRoomByName(data.name)
         if(existingRoom){
             res.status(500).json({
