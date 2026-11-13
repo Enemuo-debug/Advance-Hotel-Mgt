@@ -4,7 +4,7 @@ const RoomService = require('../Services/room.service')
 class RoomController {
 
     async CreateRoom(req, res){
-        const data = req.body
+        const data = req.body;
         const existingRoom = await RoomService.findRoomByName(data.name)
         if(existingRoom){
             res.status(500).json({
