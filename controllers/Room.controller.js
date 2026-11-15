@@ -5,6 +5,7 @@ class RoomController {
 
     async CreateRoom(req, res){
         const data = req.body;
+        console.log("Hello World");
         const existingRoom = await RoomService.findRoomByName(data.name)
         if(existingRoom){
             res.status(500).json({
